@@ -1,3 +1,6 @@
+'''
+
+'''
 
 def get_yes_no(message = "") -> str:
     '''
@@ -50,10 +53,14 @@ def get_movie(user_list: list) -> list:
     '''
     movie_list = user_list.copy()
     while True:
-        name = input("\nEnter a movie title: ").capitalize()
+        # replacing capitalize() with title() ......
+#        name = input("\nEnter a movie title: ").capitalize()
+        name = input("\nEnter a movie title: ").title()
         
-        if check_for_duplicate(movie_list, name) == False:            
-            category = input(f"What genre is {name}: ").capitalize()
+        if check_for_duplicate(movie_list, name) == False: 
+            # replacing capitalize() with title() ......
+#            category = input(f"What genre is {name}: ").capitalize()
+            category = input(f"What genre is {name}: ").title()
             movie_list.append([name, category])
         else:
             print("\nThat movie has already been submitted.")
